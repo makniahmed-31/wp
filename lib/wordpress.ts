@@ -208,9 +208,18 @@ export async function getFeaturedMediaById(id: number): Promise<FeaturedMedia> {
   return featuredMedia;
 }
 
-export async function getHeaderDetails(): Promise<any> {
+export async function getHeaderDetails(): Promise<any | null> {
   const url = newGetUrl(`/wp-json/citeopolis/v1/header`);
-  const response = await fetch(url);
-  const menu = await response.json();
-  return menu;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const menu = await response.json();
+    return menu;
+  } catch (error) {
+    console.error("Error fetching header details:", error);
+    return null;
+  }
 }
