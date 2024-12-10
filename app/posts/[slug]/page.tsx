@@ -16,7 +16,7 @@ import Balancer from "react-wrap-balancer";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const slug = (await params).slug;
   const post = await getPostBySlug(slug);
@@ -26,7 +26,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const slug = (await params).slug;
   const post = await getPostBySlug(slug);
   const featuredMedia = await getFeaturedMediaById(post.featured_media);

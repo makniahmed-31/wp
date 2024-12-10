@@ -104,7 +104,7 @@ const Nav = async ({ className, children, id }: NavProps) => {
         {children}
 
         <div className="mx-2 hidden md:flex">
-          {data.menu.items.map((item) => {
+          {data.menu.items.map((item: any) => {
             if (item.dropdown) {
               return (
                 <DropdownMenu key={item.url}>
@@ -117,7 +117,7 @@ const Nav = async ({ className, children, id }: NavProps) => {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    {item.dropdown.map((el) => (
+                    {item.dropdown.map((el: any) => (
                       <DropdownMenuItem key={el.text}>
                         <Link href={el.url}>{el.text}</Link>
                       </DropdownMenuItem>
