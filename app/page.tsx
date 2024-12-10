@@ -25,15 +25,15 @@ const ExampleJsx = () => {
     <article className="prose-m-none">
       <h1>
         <Balancer>
-          Welcome to the <a href="/">Citeopolis</a> Next.js and WordPress
+          Welcome to the <Link href="/">Citeopolis</Link> Next.js and WordPress
           Starter.
         </Balancer>
       </h1>
       {/* Vercel Clone Starter */}
 
       <p>
-        This is <a href="https://github.com">next-wp</a>, created as a way to
-        build WordPress sites with Next.js at rapid speed.
+        This is <Link href="https://github.com">next-wp</Link>, created as a way
+        to build WordPress sites with Next.js at rapid speed.
         <br /> This starter is designed to build websites with prebuilt
         components.
       </p>
@@ -98,7 +98,7 @@ const ExampleJsx = () => {
             </span>
           </span>
         </Link>
-        <a
+        <Link
           className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
           href="/"
         >
@@ -109,7 +109,7 @@ const ExampleJsx = () => {
               How to use `next-wp`
             </span>
           </span>
-        </a>
+        </Link>
       </div>
     </article>
   );

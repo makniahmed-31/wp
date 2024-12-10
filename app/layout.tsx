@@ -218,7 +218,8 @@ const Footer = () => {
         <Container className="border-t not-prose flex flex-col md:flex-row md:gap-2 gap-6 justify-between md:items-center">
           <ThemeToggle />
           <p className="text-muted-foreground">
-            © <a href="/">Citeopolis</a>. All rights reserved. 2024-present.
+            © <Link href="/">Citeopolis</Link>. All rights reserved.
+            2024-present.
           </p>
         </Container>
       </Section>
