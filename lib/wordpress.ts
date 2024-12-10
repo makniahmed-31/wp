@@ -16,7 +16,7 @@ import {
 // WordPress Config
 
 const baseUrl = process.env.WORDPRESS_URL;
-const newBaseUrl = process.env.STARTIS_URL;
+const newBaseUrl = "https://citeopolis-v5.fr.dev08.stratis.pro/";
 
 function newGetUrl(path: string, query?: Record<string, any>) {
   const params = query ? querystring.stringify(query) : null;
